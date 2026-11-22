@@ -1,0 +1,221 @@
+.fv-search-page {
+    min-height: 620px;
+    padding: 25px 0 50px;
+    background: #f4f5f7;
+}
+
+.fv-search-page-container {
+    width: var(--fv-page-width);
+    margin-inline: auto;
+}
+
+.fv-search-page header {
+    margin-bottom: 17px;
+}
+
+.fv-search-page header > span {
+    color: #ff5a00;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.fv-search-page h1 {
+    margin: 4px 0 2px;
+    color: #252b34;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.fv-search-page header p {
+    margin: 0;
+    color: #8e949d;
+    font-size: 9px;
+}
+
+.fv-search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.fv-search-results-grid article {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e5e7ea;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.fv-search-results-grid article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(25, 31, 40, .07);
+}
+
+.fv-search-result-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.fv-search-result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fv-search-result-fallback {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: #c3c8cf;
+}
+
+.fv-search-result-body {
+    padding: 8px 9px 10px;
+}
+
+.fv-search-result-title {
+    min-height: 34px;
+    display: -webkit-box;
+    overflow: hidden;
+    color: #2d333b;
+    font-size: 10px;
+    line-height: 1.35;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.fv-search-result-body > strong {
+    display: block;
+    margin-top: 5px;
+    color: #ff5a00;
+    font-size: 16px;
+}
+
+.fv-search-result-price-meta {
+    min-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fv-search-result-price-meta del {
+    color: #9ba1a9;
+    font-size: 7px;
+}
+
+.fv-search-result-price-meta span {
+    color: #6e757e;
+    font-size: 7px;
+}
+
+.fv-search-result-body > small {
+    display: block;
+    margin-top: 3px;
+    color: #8b9199;
+    font-size: 7px;
+}
+
+.fv-search-result-body > small i {
+    color: #f6b51d;
+}
+
+.fv-search-page-state {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid #e6e8eb;
+    border-radius: 8px;
+    background: #fff;
+    color: #858c95;
+    font-size: 10px;
+}
+
+.fv-search-page-state i {
+    color: #ff5a00;
+}
+
+.fv-search-page-state.error {
+    color: #b42318;
+}
+
+.fv-search-load-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+}
+
+.fv-search-load-more button {
+    min-width: 320px;
+    min-height: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid #ff5a00;
+    border-radius: 5px;
+    background: #fff;
+    color: #ff5a00;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+    .fv-search-results-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .fv-search-page {
+        padding: 13px 0 85px;
+    }
+
+    .fv-search-page-container {
+        width: 100%;
+        padding-inline: 7px;
+    }
+
+    .fv-search-page header {
+        padding-inline: 5px;
+    }
+
+    .fv-search-page h1 {
+        font-size: 17px;
+    }
+
+    .fv-search-results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .fv-search-results-grid article:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .fv-search-result-body {
+        padding: 7px 8px 9px;
+    }
+
+    .fv-search-result-title {
+        font-size: 9px;
+    }
+
+    .fv-search-result-body > strong {
+        font-size: 15px;
+    }
+
+    .fv-search-load-more button {
+        min-width: min(300px, 100%);
+    }
+}

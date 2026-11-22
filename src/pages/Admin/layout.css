@@ -1,0 +1,772 @@
+/* ==========================================================================
+   Admin Layout Variables & Base
+   ========================================================================== */
+:root {
+    --cus_admin_primary: #ff620d;
+    --cus_admin_primary-hover: #e8570a;
+    --cus_admin_sidebar-bg: #0f172a;
+    --cus_admin_sidebar-hover: #1e293b;
+    --cus_admin_sidebar-text: #94a3b8;
+    --cus_admin_sidebar-text-active: #ffffff;
+    --cus_admin_bg: #f8fafc;
+    --cus_admin_surface: #ffffff;
+    --cus_admin_border: #e2e8f0;
+    --cus_admin_text-main: #334155;
+    --cus_admin_text-muted: #64748b;
+    --cus_admin_shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --cus_admin_shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --cus_admin_shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --cus_admin_transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --cus_admin_sidebar-width: 280px;
+    --cus_admin_topbar-height: 70px;
+}
+
+/* ==========================================================================
+   Shell & Layout Structure
+   ========================================================================== */
+.cus_admin_shell {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--cus_admin_bg);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    color: var(--cus_admin_text-main);
+}
+
+.cus_admin_main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Sidebar Styling
+   ========================================================================== */
+.cus_admin_sidebar {
+    width: var(--cus_admin_sidebar-width);
+    background-color: var(--cus_admin_sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-shrink: 0;
+    border-right: 1px solid #1e293b;
+    transition: var(--cus_admin_transition);
+    z-index: 50;
+}
+
+/* Brand / Logo Area */
+.cus_admin_brand {
+    height: var(--cus_admin_topbar-height);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    text-decoration: none;
+    color: white;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* লোগো ইমেজের জন্য নতুন CSS */
+.cus_admin_brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.cus_admin_brand span:not(.cus_admin_brand-logo) {
+    display: flex;
+    flex-direction: column;
+}
+
+.cus_admin_brand strong {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.cus_admin_brand small {
+    font-size: 0.65rem;
+    color: var(--cus_admin_sidebar-text);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.cus_admin_nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cus_admin_nav::-webkit-scrollbar {
+    width: 5px;
+}
+.cus_admin_nav::-webkit-scrollbar-thumb {
+    background-color: #334155;
+    border-radius: 10px;
+}
+
+/* Dashboard Text & Icon Alignment Fix */
+.cus_admin_nav-direct,
+.cus_admin_nav-group-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 'space-between' রিমুভ করে 'flex-start' দেওয়া হয়েছে */
+    gap: 12px; /* আইকন এবং টেক্সট এর মাঝে গ্যাপ */
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: var(--cus_admin_sidebar-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_nav-direct i:first-child,
+.cus_admin_nav-group-button i:first-child {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_nav-group-button .fa-chevron-down {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    margin-left: auto; /* এই কোডটি দিয়ে Dropdown এর Arrow কে একবারে ডান পাশে পাঠানো হয়েছে */
+}
+
+.cus_admin_nav-group-button .fa-chevron-down.cus_admin_rotate {
+    transform: rotate(180deg);
+}
+
+.cus_admin_nav-direct:hover,
+.cus_admin_nav-group-button:hover {
+    background-color: var(--cus_admin_sidebar-hover);
+    color: var(--cus_admin_sidebar-text-active);
+}
+
+.cus_admin_nav-direct.cus_admin_active,
+.cus_admin_nav-group.cus_admin_active > .cus_admin_nav-group-button {
+    background-color: rgba(255, 98, 13, 0.1);
+    color: var(--cus_admin_primary);
+}
+
+/* Submenu Styles */
+.cus_admin_nav-submenu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    padding-left: 28px;
+    margin-top: 2px;
+}
+
+.cus_admin_nav-submenu.cus_admin_open {
+    max-height: 400px;
+    opacity: 1;
+    margin-bottom: 8px;
+}
+
+.cus_admin_nav-submenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: var(--cus_admin_sidebar-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: var(--cus_admin_transition);
+    gap: 10px;
+}
+
+.cus_admin_submenu-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #475569;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_nav-submenu a:hover {
+    color: var(--cus_admin_sidebar-text-active);
+}
+
+.cus_admin_nav-submenu a:hover .cus_admin_submenu-dot {
+    background-color: var(--cus_admin_sidebar-text-active);
+}
+
+.cus_admin_nav-submenu a.cus_admin_active {
+    color: var(--cus_admin_primary);
+    font-weight: 600;
+}
+
+.cus_admin_nav-submenu a.cus_admin_active .cus_admin_submenu-dot {
+    background-color: var(--cus_admin_primary);
+    box-shadow: 0 0 6px var(--cus_admin_primary);
+}
+
+/* Sidebar Bottom */
+.cus_admin_sidebar-bottom {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cus_admin_sidebar-bottom a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: rgba(255,255,255,0.05);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_sidebar-bottom a:hover {
+    background-color: var(--cus_admin_primary);
+    box-shadow: 0 4px 12px rgba(255, 98, 13, 0.4);
+}
+
+/* ==========================================================================
+   Topbar Styling
+   ========================================================================== */
+.cus_admin_topbar {
+    height: var(--cus_admin_topbar-height);
+    background-color: var(--cus_admin_surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: var(--cus_admin_shadow-sm);
+    z-index: 40;
+}
+
+.cus_admin_topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cus_admin_mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--cus_admin_text-main);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_mobile-toggle:hover {
+    background-color: var(--cus_admin_bg);
+}
+
+.cus_admin_topbar-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.cus_admin_topbar-title strong {
+    font-size: 1.1rem;
+    color: var(--cus_admin_text-main);
+}
+
+.cus_admin_topbar-title span {
+    font-size: 0.75rem;
+    color: var(--cus_admin_text-muted);
+}
+
+.cus_admin_topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cus_admin_topbar-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--cus_admin_text-muted);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--cus_admin_transition);
+    background-color: var(--cus_admin_bg);
+}
+
+.cus_admin_topbar-icon:hover {
+    color: var(--cus_admin_primary);
+    background-color: rgba(255, 98, 13, 0.1);
+}
+
+/* Profile Dropdown */
+.cus_admin_profile-wrap {
+    position: relative;
+}
+
+.cus_admin_profile-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_profile-button:hover {
+    background-color: var(--cus_admin_bg);
+}
+
+.cus_admin_avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--cus_admin_primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cus_admin_profile-copy {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cus_admin_profile-copy strong {
+    font-size: 0.9rem;
+    color: var(--cus_admin_text-main);
+}
+
+.cus_admin_profile-copy small {
+    font-size: 0.75rem;
+    color: var(--cus_admin_text-muted);
+}
+
+.cus_admin_profile-button .fa-chevron-down {
+    font-size: 0.75rem;
+    color: var(--cus_admin_text-muted);
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_profile-button .fa-chevron-down.cus_admin_rotate {
+    transform: rotate(180deg);
+}
+
+/* Profile Menu Popup */
+.cus_admin_profile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 240px;
+    background-color: var(--cus_admin_surface);
+    border-radius: 12px;
+    box-shadow: var(--cus_admin_shadow-lg);
+    border: 1px solid var(--cus_admin_border);
+    animation: fadeInDown 0.2s ease-out forwards;
+    overflow: hidden;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cus_admin_profile-menu-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--cus_admin_border);
+    background-color: #f8fafc;
+}
+
+.cus_admin_profile-menu-header strong {
+    font-size: 0.9rem;
+    color: var(--cus_admin_text-main);
+    word-break: break-all;
+}
+
+.cus_admin_profile-menu-body {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cus_admin_profile-menu-body a,
+.cus_admin_profile-menu-body button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--cus_admin_text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: var(--cus_admin_transition);
+}
+
+.cus_admin_profile-menu-body a:hover,
+.cus_admin_profile-menu-body button:hover {
+    background-color: var(--cus_admin_bg);
+    color: var(--cus_admin_primary);
+}
+
+.cus_admin_profile-menu-body i {
+    width: 16px;
+    text-align: center;
+    color: var(--cus_admin_text-muted);
+}
+
+.cus_admin_profile-menu-body a:hover i,
+.cus_admin_profile-menu-body button:hover i {
+    color: var(--cus_admin_primary);
+}
+
+.cus_admin_divider {
+    height: 1px;
+    background-color: var(--cus_admin_border);
+    margin: 6px 0;
+}
+
+.cus_admin_logout-btn {
+    color: #ef4444 !important;
+}
+
+.cus_admin_logout-btn i {
+    color: #ef4444 !important;
+}
+
+.cus_admin_logout-btn:hover {
+    background-color: #fef2f2 !important;
+}
+
+/* ==========================================================================
+   Main Content Area
+   ========================================================================== */
+.cus_admin_content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+}
+
+.cus_admin_content-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+/* ==========================================================================
+   Responsive Design (Mobile & Tablet)
+   ========================================================================== */
+.cus_admin_mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 45;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    .cus_admin_mobile-toggle {
+        display: block;
+    }
+
+    .cus_admin_sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        box-shadow: var(--cus_admin_shadow-lg);
+    }
+
+    .cus_admin_sidebar.cus_admin_open {
+        left: 0;
+    }
+
+    .cus_admin_mobile-overlay {
+        display: block;
+        pointer-events: none;
+    }
+
+    .cus_admin_mobile-overlay.cus_admin_open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .cus_admin_topbar-title span {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .cus_admin_topbar {
+        padding: 0 16px;
+    }
+    
+    .cus_admin_content {
+        padding: 16px;
+    }
+    
+    .cus_admin_profile-copy {
+        display: none;
+    }
+    
+    .cus_admin_topbar-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+
+/* =========================================================
+   FACEVALY ADMIN BRAND — FIXED LOGO
+========================================================= */
+
+.adm-brand {
+    width: 100%;
+    min-width: 0;
+    height: 72px;
+
+    padding: 0 18px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    gap: 11px;
+
+    overflow: hidden;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   FIXED LOGO BOX
+========================================================= */
+
+.adm-brand-logo-box {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+    max-width: 42px !important;
+
+    min-height: 42px !important;
+    max-height: 42px !important;
+
+    flex: 0 0 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    border-radius: 8px;
+
+    background: transparent;
+        width: 50px;
+    padding: 2px 0px;
+}
+
+
+/* =========================================================
+   ACTUAL IMAGE
+========================================================= */
+
+.adm-brand-logo-img {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0 !important;
+    max-width: 42px !important;
+
+    min-height: 0 !important;
+    max-height: 42px !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    flex: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.adm-brand-copy {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+
+.adm-brand-copy strong {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    line-height: 1.15;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+.adm-brand-copy small {
+    margin-top: 5px;
+
+    color: #8491a8;
+
+    font-size: 8px;
+    line-height: 1.15;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   REMOVE OLD F MARK
+========================================================= */
+
+.adm-brand-mark {
+    display: none !important;
+}
+
+
+/* =========================================================
+   GLOBAL IMAGE PROTECTION INSIDE BRAND
+========================================================= */
+
+.adm-sidebar .adm-brand img,
+.adm-brand img {
+    width: 42px !important;
+    height: 42px !important;
+
+    max-width: 42px !important;
+    max-height: 42px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .adm-brand {
+        height: 64px;
+
+        padding: 0 14px;
+
+        gap: 9px;
+    }
+
+
+    .adm-brand-logo-box {
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+        max-width: 38px !important;
+
+        min-height: 38px !important;
+        max-height: 38px !important;
+
+        flex-basis: 38px !important;
+            width: 50px;
+    padding: 2px 0px;
+    }
+
+
+    .adm-brand-logo-img,
+    .adm-sidebar .adm-brand img,
+    .adm-brand img {
+        width: 38px !important;
+        height: 38px !important;
+
+        max-width: 38px !important;
+        max-height: 38px !important;
+    }
+
+
+    .adm-brand-copy strong {
+        font-size: 15px;
+    }
+
+
+    .adm-brand-copy small {
+        margin-top: 4px;
+
+        font-size: 7px;
+
+        letter-spacing: 1.1px;
+    }
+}
+
+
+
+.adm-brand-logo-box{
+        width: 50px!important;
+    padding: 2px 0px!important;
+}

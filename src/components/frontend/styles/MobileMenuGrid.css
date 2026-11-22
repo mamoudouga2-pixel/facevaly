@@ -1,0 +1,80 @@
+@media (max-width: 720px) {
+.mobile-menu-grid {
+background: #f0f1f6;
+          padding: 12px 24px 17px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 12px 8px;
+          border-bottom: 1px solid #e5e7ec;
+}
+
+.mobile-menu-grid a {
+text-align: center;
+          color: #2c2c33;
+          min-width: 0;
+}
+
+.mobile-menu-grid small {
+display: block;
+          font-size: 11px;
+          line-height: 1.08;
+          margin-top: 5px;
+}
+
+.menu-icon {
+height: 47px;
+          width: 47px;
+          border-radius: 13px;
+          margin: auto;
+          display: grid;
+          place-items: center;
+          font-size: 11px;
+          font-weight: 800;
+          color: #fff;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.menu-icon.orange {
+background: #ffb027;
+}
+
+.menu-icon.purple {
+background: linear-gradient(135deg, #6b39ff, #bc4cff);
+}
+
+.menu-icon.red {
+background: #ff5b24;
+}
+
+.menu-icon.green {
+background: #23a778;
+}
+
+.menu-icon.pink {
+background: #d9af89;
+}
+
+.menu-icon.yellow {
+background: #ffcf17;
+          color: #202020;
+}
+
+.menu-icon.yellow2 {
+background: #ffe521;
+          color: #b32784;
+}
+
+.menu-icon.violet {
+background: linear-gradient(135deg, #6b29b9, #ef66db);
+          font-size: 20px;
+}
+
+.menu-icon.blush {
+background: #efb1ae;
+}
+
+.menu-icon.lime {
+background: #9bdc25;
+          color: #26502c;
+}
+}

@@ -1,0 +1,206 @@
+.lpb-shell {
+    display: grid;
+    gap: 18px;
+}
+
+.lpb-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.lpb-toolbar h1 {
+    margin: 8px 0 4px;
+    font-size: 28px;
+}
+
+.lpb-toolbar p,
+.lpb-muted {
+    color: #667085;
+    margin: 0;
+}
+
+.lpb-toolbar--secondary {
+    align-items: center;
+}
+
+.lpb-toolbar--secondary input,
+.lpb-field input,
+.lpb-field textarea,
+.lpb-field select,
+.lpb-list-editor__row input {
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: #fff;
+}
+
+.lpb-alert {
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #fff1f0;
+    color: #b42318;
+    border: 1px solid #ffcdc9;
+}
+
+.lpb-empty,
+.lpb-table-wrap,
+.lpb-card {
+    background: #fff;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.lpb-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lpb-table th,
+.lpb-table td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f2f4f7;
+    vertical-align: top;
+}
+
+.lpb-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lpb-pill {
+    display: inline-flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f2f4f7;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.lpb-pill--on {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.lpb-editor-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 16px;
+}
+
+.lpb-card h2 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.lpb-field {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #344054;
+}
+
+.lpb-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.lpb-sections {
+    display: grid;
+    gap: 14px;
+}
+
+.lpb-section-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lpb-section-tabs button {
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.lpb-section-tabs button.is-active {
+    background: #ff620d;
+    border-color: #ff620d;
+    color: #fff;
+}
+
+.lpb-section-panel {
+    display: grid;
+    gap: 4px;
+    padding-top: 8px;
+}
+
+.lpb-list-editor {
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px dashed #d0d5dd;
+    border-radius: 12px;
+}
+
+.lpb-list-editor__head,
+.lpb-list-editor__row,
+.lpb-single-upload {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lpb-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+}
+
+.lpb-image-card,
+.lpb-single-upload img,
+.lpb-image-card img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.lpb-image-card {
+    border: 1px solid #eaecf0;
+    padding: 8px;
+}
+
+.lpb-image-card img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    min-height: 88px;
+    background:
+        linear-gradient(45deg, #eef2f6 25%, transparent 25%) 0 0 / 12px 12px,
+        linear-gradient(-45deg, #eef2f6 25%, transparent 25%) 0 0 / 12px 12px,
+        #f8fafc;
+}
+
+.lpb-image-card button,
+.lpb-upload-btn {
+    cursor: pointer;
+}
+
+@media (max-width: 960px) {
+    .lpb-toolbar,
+    .lpb-editor-grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+}

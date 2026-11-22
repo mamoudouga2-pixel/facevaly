@@ -1,0 +1,157 @@
+.desktop-mainbar {
+    position: relative;
+    z-index: 90;
+    background: linear-gradient(180deg, #f8faff 0%, #f2f6ff 100%);
+    color: #1c2749;
+    border-bottom: 1px solid #e9edf5;
+}
+
+.desktop-mainbar.is-stuck {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 10px 28px rgba(19, 29, 52, 0.11);
+}
+
+.main-head {
+    height: 82px;
+    display: grid;
+    grid-template-columns: 185px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+}
+
+.main-head.container {
+    width: var(--fv-page-width);
+    margin-inline: auto;
+}
+
+.desktop-mainbar .brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1d2a54;
+    transition: transform 0.24s ease;
+}
+
+.desktop-mainbar .brand:hover {
+    transform: translateY(-1px);
+}
+
+.desktop-mainbar .facevaly-logo {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #e7ecf5;
+    background: #ffffff;
+    padding: 3px;
+}
+
+.desktop-mainbar .brand strong {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-family: var(--fv-font-brand);
+}
+
+.main-head-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.customer-login-btn {
+    padding: 0;
+    border: 1px solid #ffd6bf;
+    border-radius: 50%;
+    background: #fff7f2;
+    color: #ff5a00;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.customer-login-btn:hover {
+    background: #ff5a00;
+    border-color: #ff5a00;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.header-icon-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e5eaf3;
+    border-radius: 50%;
+    background: #fff;
+    color: #445276;
+    font-size: 19px;
+    transition: color 0.2s ease, border-color 0.2s ease,
+        transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-icon-btn:hover {
+    color: #ff5a00;
+    border-color: #ffb995;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(255, 90, 0, 0.13);
+}
+
+.header-icon-btn.customer-login-btn:hover {
+    color: #ffffff;
+}
+
+.header-icon-btn i {
+    display: block;
+    line-height: 1;
+}
+
+.fv-header-cart-count {
+    position: absolute;
+    top: -3px;
+    right: -2px;
+    min-width: 19px;
+    height: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    background: #ff5a00;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+    .main-head {
+        grid-template-columns: 155px minmax(0, 1fr) auto;
+        gap: 16px;
+    }
+
+    .desktop-mainbar .brand strong {
+        font-size: 21px;
+    }
+
+    .main-head-actions {
+        gap: 8px;
+    }
+
+    .header-icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-mainbar {
+        display: none !important;
+    }
+}

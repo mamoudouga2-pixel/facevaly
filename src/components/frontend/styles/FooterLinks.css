@@ -1,0 +1,80 @@
+.footer-top {
+background: #f4f4f6;
+        padding: 56px 0 28px;
+}
+
+.footer-top-grid {
+display: grid;
+        grid-template-columns: 1.1fr 1fr 2fr;
+        gap: 72px;
+}
+
+.desktop-footer h3 {
+font-size: 17px;
+        margin: 0 0 11px;
+        font-weight: 500;
+}
+
+.footer-top section > a {
+display: block;
+        font-size: 13px;
+        line-height: 1.65;
+        color: #13175b;
+}
+
+.app-download {
+padding-top: 6px;
+}
+
+.happy-shopping {
+display: flex;
+        align-items: center;
+        gap: 14px;
+}
+
+.happy-shopping img {
+width: 46px;
+        height: 46px;
+        border-radius: 9px;
+        object-fit: contain;
+}
+
+.happy-shopping strong {
+display: block;
+        color: var(--orange);
+        font-size: 16px;
+}
+
+.happy-shopping span {
+display: block;
+        font-size: 15px;
+        margin-top: 2px;
+}
+
+.store-badges {
+display: flex;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+        margin: 12px 0 0 60px;
+}
+
+.store-badges span {
+display: inline-block;
+        background: #080808;
+        color: #fff;
+        border-radius: 5px;
+        padding: 6px 12px;
+        font-size: 8px;
+        line-height: 1.15;
+        min-width: 126px;
+}
+
+.store-badges b {
+font-size: 16px;
+}
+
+@media (max-width: 1000px) and (min-width: 721px) {
+.footer-top-grid {
+gap: 38px;
+}
+}

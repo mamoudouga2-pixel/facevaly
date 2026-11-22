@@ -1,0 +1,132 @@
+.fv-account-settings-page {
+    min-height: 68vh;
+    background: var(--fv-page, #f5f6f8);
+    padding: 24px 0 40px;
+}
+
+.fv-account-settings-shell {
+    width: min(960px, calc(100% - 28px));
+    margin-inline: auto;
+}
+
+.fv-account-settings-hero {
+    margin-bottom: 14px;
+}
+
+.fv-account-settings-hero > span {
+    color: var(--fv-orange, #f85606);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.fv-account-settings-hero h1 {
+    margin: 5px 0 6px;
+    color: #10285b;
+    font-size: 1.6rem;
+    font-weight: 760;
+}
+
+.fv-account-settings-hero p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.86rem;
+}
+
+.fv-account-settings-loading {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    color: #6b7280;
+}
+
+.fv-account-settings-form {
+    display: grid;
+    gap: 14px;
+}
+
+.fv-account-settings-form section {
+    padding: 16px;
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.fv-account-settings-form h2 {
+    margin: 0 0 12px;
+    color: #10285b;
+    font-size: 1rem;
+}
+
+.fv-account-settings-form label {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.fv-account-settings-form label:last-child {
+    margin-bottom: 0;
+}
+
+.fv-account-settings-form span {
+    color: #556070;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.fv-account-settings-form input {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d8dee6;
+    border-radius: 9px;
+    outline: 0;
+    color: #111827;
+    font-size: 0.84rem;
+}
+
+.fv-account-settings-form input:focus {
+    border-color: #ffb48d;
+    box-shadow: 0 0 0 3px rgba(255, 98, 13, 0.12);
+}
+
+.fv-account-settings-error {
+    padding: 12px 14px;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+    background: #fff5f5;
+    color: #b91c1c;
+    font-size: 0.82rem;
+}
+
+.fv-account-settings-form > button {
+    justify-self: start;
+    min-width: 170px;
+    height: 44px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(140deg, #ff640f 0%, #ea5306 100%);
+    color: #fff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.fv-account-settings-form > button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+    .fv-account-settings-page {
+        padding: 14px 0 28px;
+    }
+
+    .fv-account-settings-shell {
+        width: calc(100% - 16px);
+    }
+}

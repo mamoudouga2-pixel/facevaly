@@ -1,0 +1,297 @@
+.spa-page {
+    --spa-orange: #ff5a00;
+    --spa-orange-dark: #e94f00;
+    --spa-navy: #17375f;
+    --spa-ink: #111827;
+    --spa-muted: #667085;
+    --spa-line: #e8edf4;
+    --spa-soft: #fff4ed;
+
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: var(--spa-ink);
+    background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, #ffe4d4 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, #d9e8ff 0%, transparent 50%),
+        linear-gradient(180deg, #f7f9fc 0%, #ffffff 45%, #fff8f3 100%);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.spa-atmosphere {
+    position: absolute;
+    inset: auto -20% -30% auto;
+    width: min(70vw, 640px);
+    height: min(70vw, 640px);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 90, 0, 0.12), transparent 68%);
+    pointer-events: none;
+}
+
+.spa-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px clamp(20px, 4vw, 48px);
+}
+
+.spa-brand {
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.03em;
+    color: var(--spa-navy);
+    text-decoration: none;
+}
+
+.spa-logout {
+    border: 1px solid var(--spa-line);
+    background: #fff;
+    color: var(--spa-muted);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.spa-logout:hover {
+    color: var(--spa-navy);
+    border-color: #c9d4e3;
+}
+
+.spa-main {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    padding: 24px 20px 64px;
+    min-height: calc(100vh - 76px);
+}
+
+.spa-card {
+    width: min(100%, 560px);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(23, 55, 95, 0.08);
+    border-radius: 24px;
+    padding: clamp(28px, 5vw, 44px);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 24px 60px rgba(23, 55, 95, 0.08);
+    text-align: center;
+    animation: spa-rise 0.55s ease both;
+}
+
+.spa-loading {
+    display: grid;
+    gap: 14px;
+    place-items: center;
+}
+
+.spa-spinner {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid #ffe0cc;
+    border-top-color: var(--spa-orange);
+    animation: spa-spin 0.8s linear infinite;
+}
+
+.spa-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    color: var(--spa-orange);
+    background: linear-gradient(145deg, var(--spa-soft), #ffffff);
+    border: 1px solid #ffd7bf;
+    font-size: 1.6rem;
+    animation: spa-pulse 2.4s ease-in-out infinite;
+}
+
+.spa-eyebrow {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--spa-orange);
+}
+
+.spa-card h1 {
+    margin: 0 0 14px;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: var(--spa-navy);
+}
+
+.spa-lead {
+    margin: 0 0 28px;
+    color: var(--spa-muted);
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
+
+.spa-lead strong {
+    color: var(--spa-ink);
+}
+
+.spa-steps {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+.spa-steps li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--spa-line);
+    background: #fafbfd;
+    color: var(--spa-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.spa-steps li span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e8edf4;
+    color: var(--spa-navy);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.spa-steps li.is-current {
+    border-color: #ffd0b3;
+    background: var(--spa-soft);
+    color: var(--spa-navy);
+}
+
+.spa-steps li.is-current span {
+    background: var(--spa-orange);
+    color: #fff;
+}
+
+.spa-note {
+    margin: 0 0 24px;
+    color: var(--spa-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.spa-message {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #eef6ff;
+    color: var(--spa-navy);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.spa-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.spa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 20px;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.spa-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.spa-btn-primary {
+    background: var(--spa-orange);
+    color: #fff;
+}
+
+.spa-btn-primary:hover:not(:disabled) {
+    background: var(--spa-orange-dark);
+    transform: translateY(-1px);
+}
+
+.spa-btn-ghost {
+    background: #fff;
+    border-color: var(--spa-line);
+    color: var(--spa-navy);
+}
+
+.spa-btn-ghost:hover {
+    border-color: #c9d4e3;
+}
+
+@keyframes spa-rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes spa-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spa-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spa-card,
+    .spa-icon,
+    .spa-spinner {
+        animation: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .spa-actions {
+        flex-direction: column;
+    }
+
+    .spa-btn {
+        width: 100%;
+    }
+}

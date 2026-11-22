@@ -1,0 +1,36 @@
+.footer-seo {
+background: #f4f4f6;
+        padding: 58px 0;
+}
+
+.seo-grid {
+display: grid;
+        grid-template-columns: 1.15fr 1.1fr 1.1fr 1.05fr;
+        gap: 58px;
+        color: #7b7d8a;
+}
+
+.seo-grid h3 {
+color: #4a4c58;
+        font-size: 16px;
+        line-height: 1.25;
+}
+
+.seo-grid h4 {
+font-size: 11px;
+        margin: 14px 0 3px;
+        color: #6e6f7d;
+        font-weight: 500;
+}
+
+.seo-grid p {
+font-size: 12px;
+        line-height: 1.3;
+        margin: 0 0 12px;
+}
+
+@media (max-width: 1000px) and (min-width: 721px) {
+.seo-grid {
+gap: 28px;
+}
+}

@@ -1,0 +1,36 @@
+.quick-actions {
+display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        padding-block: 18px;
+}
+
+.quick-card {
+background: #fff;
+        border: 1px solid #efeff2;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.quick-card span {
+font-size: 25px;
+        display: block;
+        margin-bottom: 8px;
+}
+
+.quick-card strong,
+      .quick-card small {
+display: block;
+}
+
+.quick-card small {
+color: #888;
+        margin-top: 4px;
+}
+
+.quick-card > span i {
+font-size: 24px;
+        color: var(--orange);
+}

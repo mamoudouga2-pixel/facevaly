@@ -1,0 +1,438 @@
+:root {
+    --fvos2-orange: #ff5a00;
+    --fvos2-bg: #fff8f3;
+    --fvos2-text: #202630;
+    --fvos2-muted: #87909b;
+    --fvos2-border: #e8e9ec;
+}
+
+.fvos2-page {
+    min-height: 680px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 28px 15px 55px;
+    background:
+        radial-gradient(circle at 50% 0, #fff, transparent 40%),
+        var(--fvos2-bg);
+}
+
+.fvos2-card {
+    width: min(780px, 100%);
+    overflow: hidden;
+    border: 1px solid #ffd8c3;
+    border-top: 5px solid var(--fvos2-orange);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 15px 42px rgba(54, 36, 25, .06);
+}
+
+.fvos2-top {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr) 40px;
+    align-items: center;
+    gap: 14px;
+    padding: 23px 25px 17px;
+}
+
+.fvos2-check {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border: 7px solid #fff0e7;
+    border-radius: 50%;
+    background: var(--fvos2-orange);
+    color: #fff;
+    font-size: 25px;
+}
+
+.fvos2-top small {
+    color: var(--fvos2-orange);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.fvos2-top h1 {
+    margin: 4px 0 3px;
+    color: #1e242c;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 650;
+}
+
+.fvos2-top p {
+    margin: 0;
+    color: var(--fvos2-muted);
+    font-size: 10px;
+}
+
+.fvos2-invoice {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #ffd0b6;
+    border-radius: 9px;
+    background: #fff7f2;
+    color: var(--fvos2-orange);
+}
+
+.fvos2-facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 9px;
+    padding: 0 25px 16px;
+}
+
+.fvos2-facts > div {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid var(--fvos2-border);
+    border-radius: 10px;
+    background: #fbfcfd;
+}
+
+.fvos2-facts > div > span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.fvos2-facts .orange,
+.fvos2-facts .money {
+    background: #fff0e7;
+    color: var(--fvos2-orange);
+}
+
+.fvos2-facts .green {
+    background: #e9fbf3;
+    color: #13a875;
+}
+
+.fvos2-facts .blue {
+    background: #eef5ff;
+    color: #2f6fec;
+}
+
+.fvos2-facts p {
+    min-width: 0;
+    margin: 0;
+}
+
+.fvos2-facts p small {
+    display: block;
+    color: #9097a1;
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+.fvos2-facts p strong {
+    display: block;
+    overflow: hidden;
+    margin-top: 3px;
+    color: #25303d;
+    font-size: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fvos2-detail-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.fvos2-detail-grid > section {
+    min-width: 0;
+    padding: 14px 25px;
+}
+
+.fvos2-detail-grid > section:first-child {
+    border-right: 1px solid #eee;
+}
+
+.fvos2-detail-grid h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 9px;
+    color: #38414c;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.fvos2-detail-grid h2 i {
+    color: var(--fvos2-orange);
+}
+
+.fvos2-detail-grid > section > strong {
+    font-size: 10px;
+}
+
+.fvos2-detail-grid > section > p {
+    margin: 3px 0 0;
+    color: #737b85;
+    font-size: 8px;
+    line-height: 1.35;
+}
+
+.fvos2-detail-grid > section > small {
+    display: block;
+    margin-top: 6px;
+    color: #9b7a67;
+    font-size: 7px;
+}
+
+.fvos2-items {
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.fvos2-items > div {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px dashed #e8e9eb;
+}
+
+.fvos2-items > div:last-child {
+    border-bottom: 0;
+}
+
+.fvos2-items span {
+    min-width: 0;
+}
+
+.fvos2-items strong {
+    display: block;
+    overflow: hidden;
+    color: #303742;
+    font-size: 9px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fvos2-items small {
+    display: block;
+    margin-top: 2px;
+    color: #979da5;
+    font-size: 7px;
+}
+
+.fvos2-items b {
+    flex: 0 0 auto;
+    color: #303742;
+    font-size: 9px;
+}
+
+.fvos2-totals {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    padding: 13px 25px;
+}
+
+.fvos2-totals > span {
+    min-width: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0 12px;
+    border-right: 1px solid #eee;
+}
+
+.fvos2-totals > span:last-child {
+    border-right: 0;
+}
+
+.fvos2-totals small {
+    color: #9198a1;
+    font-size: 7px;
+}
+
+.fvos2-totals strong {
+    color: #333a44;
+    font-size: 10px;
+}
+
+.fvos2-totals .green-text {
+    color: #10a36f;
+}
+
+.fvos2-totals .grand strong {
+    color: var(--fvos2-orange);
+    font-size: 15px;
+}
+
+.fvos2-actions {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 9px;
+    padding: 0 25px 22px;
+}
+
+.fvos2-actions button {
+    min-height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid #dfe2e6;
+    border-radius: 8px;
+    background: #fff;
+    color: #45505c;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.fvos2-actions button.primary {
+    border-color: var(--fvos2-orange);
+    background: var(--fvos2-orange);
+    color: #fff;
+    box-shadow: 0 7px 16px rgba(255, 90, 0, .18);
+}
+
+.fvos2-actions button.invoice {
+    border-color: #ffc7a8;
+    color: var(--fvos2-orange);
+}
+
+.fvos2-state {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--fvos2-bg);
+    color: #7f8791;
+}
+
+.fvos2-state i {
+    color: var(--fvos2-orange);
+}
+
+.fvos2-state.error {
+    color: #b42318;
+}
+
+@media (max-width: 767px) {
+    .fvos2-page {
+        min-height: 100dvh;
+        padding: 12px 8px 25px;
+        background: #f6f7f9;
+    }
+
+    .fvos2-card {
+        border-top-width: 4px;
+        border-radius: 14px;
+    }
+
+    .fvos2-top {
+        grid-template-columns: 50px minmax(0, 1fr) 36px;
+        gap: 9px;
+        padding: 16px 13px 12px;
+    }
+
+    .fvos2-check {
+        width: 48px;
+        height: 48px;
+        border-width: 6px;
+        font-size: 20px;
+    }
+
+    .fvos2-top h1 {
+        font-size: 15px;
+    }
+
+    .fvos2-top p {
+        font-size: 8px;
+    }
+
+    .fvos2-invoice {
+        width: 34px;
+        height: 34px;
+    }
+
+    .fvos2-facts {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+        padding: 0 12px 11px;
+    }
+
+    .fvos2-facts > div {
+        min-height: 62px;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 6px;
+        padding: 6px 8px;
+    }
+
+    .fvos2-facts > div > span {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .fvos2-facts p strong {
+        font-size: 9px;
+    }
+
+    .fvos2-detail-grid {
+        display: block;
+    }
+
+    .fvos2-detail-grid > section {
+        padding: 11px 13px;
+    }
+
+    .fvos2-detail-grid > section:first-child {
+        border-right: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .fvos2-items {
+        max-height: 145px;
+    }
+
+    .fvos2-totals {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 12px;
+    }
+
+    .fvos2-totals > span {
+        min-width: 0;
+        padding: 7px 8px;
+        border-right: 0;
+        border-bottom: 1px solid #f0f1f2;
+    }
+
+    .fvos2-totals > span:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .fvos2-actions {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+        padding: 4px 12px 13px;
+    }
+
+    .fvos2-actions button {
+        min-height: 40px;
+    }
+
+    .fvos2-actions button.primary {
+        grid-column: 1 / -1;
+    }
+}

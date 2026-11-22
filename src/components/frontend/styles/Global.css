@@ -1,0 +1,151 @@
+:root {
+    --orange: #f85606;
+    --orange-dark: #e94c00;
+    --ink: #0f1748;
+    --text: #333;
+    --muted: #7b7f8c;
+    --soft: #f4f4f6;
+    --soft2: #f0f1f6;
+    --pink: #ff5a73;
+    --pink-soft: #ffb8c4;
+    --white: #fff;
+    --line: #ececf0;
+    --shadow: 0 8px 24px rgba(27, 31, 53, 0.08);
+    --fv-font-ui: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --fv-font-brand: "Outfit", "Plus Jakarta Sans", sans-serif;
+    /* Fluid storefront content width — gutters shrink/grow with viewport */
+    --fv-page-gutter: clamp(16px, 2.2vw, 40px);
+    --fv-page-max: 1760px;
+    --fv-page-width: min(
+        var(--fv-page-max),
+        calc(100vw - (2 * var(--fv-page-gutter)))
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fv-font-ui);
+    color: var(--text);
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: var(--fv-page-width);
+    margin-inline: auto;
+}
+
+.mobile-appbar,
+.mobile-search-wrap,
+.mobile-menu-grid,
+.mobile-tab-strip,
+.mobile-bottom-nav {
+    display: none;
+}
+
+.desktop-header {
+    background: var(--orange);
+    color: #fff;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--fv-font-ui);
+}
+
+@media (max-width: 720px) {
+    body {
+        background: #333;
+    }
+
+    .page-shell {
+        max-width: 720px;
+        margin: 0 auto;
+        background: #fff;
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 72px;
+        overflow: hidden;
+    }
+
+    .desktop-header,
+    .desktop-only,
+    .desktop-footer,
+    .desktop-only-flex,
+    .desktop-only-card {
+        display: none !important;
+    }
+
+    .mobile-appbar,
+    .mobile-search-wrap,
+    .mobile-menu-grid,
+    .mobile-tab-strip,
+    .mobile-bottom-nav {
+        display: flex;
+    }
+
+    .container {
+        width: 100%;
+        padding-inline: 18px;
+    }
+
+    .page-shell {
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+
+    .desktop-topbar,
+    .desktop-mainbar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 721px) {
+
+    .desktop-topbar,
+    .desktop-mainbar {
+        display: block;
+    }
+}
+
+.fv-home-bootstrap-loading,
+.fv-home-bootstrap-error {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #66708a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.fv-home-bootstrap-loading i {
+    color: var(--orange, #f85606);
+}

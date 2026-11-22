@@ -1,0 +1,70 @@
+.section-space {
+padding: 18px 0 26px;
+}
+
+.flash-section,
+      .popular-section {
+background: #f6f6f8;
+}
+
+.section-head {
+display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+        margin-bottom: 14px;
+}
+
+.section-head h2 {
+margin: 0;
+        color: #191919;
+        font-size: 24px;
+        letter-spacing: -0.4px;
+}
+
+.section-head h2 span {
+font-size: 19px;
+}
+
+.section-head p {
+margin: 7px 0 0;
+        color: #878b95;
+        font-size: 13px;
+}
+
+.section-head a {
+color: #2a2368;
+        font-weight: 700;
+        white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+.section-space {
+padding: 14px 0 12px;
+}
+
+.section-head {
+align-items: center;
+          margin-bottom: 10px;
+}
+
+.section-head h2 {
+font-size: 19px;
+          color: #17171a;
+}
+
+.section-head a {
+font-size: 14px;
+          font-weight: 500;
+          color: #16145d;
+}
+
+.mobile-tight h2 {
+font-size: 18px;
+          letter-spacing: -0.3px;
+}
+
+.mobile-tight a {
+font-size: 13px;
+}
+}

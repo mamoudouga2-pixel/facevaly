@@ -1,0 +1,21 @@
+.mobile-search-wrap {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .mobile-search-wrap {
+        position: relative;
+        z-index: 85;
+        display: flex;
+        width: 100%;
+        padding: 7px 6px 8px;
+        background: #f0f1f6;
+    }
+
+    .mobile-search-wrap.is-stuck {
+        position: sticky;
+        top: 0;
+        z-index: 120;
+        box-shadow: 0 4px 11px rgba(25, 31, 40, .06);
+    }
+}

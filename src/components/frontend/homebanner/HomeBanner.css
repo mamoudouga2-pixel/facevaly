@@ -1,0 +1,325 @@
+.fv-home-banner {
+    background: #f5f5f5;
+}
+
+.fv-home-banner-container {
+    width: var(--fv-page-width);
+    margin-inline: auto;
+}
+
+.fv-home-banner-layout {
+    display: block;
+    width: 100%;
+    min-height: 380px;
+    background: #ffffff;
+}
+
+.fv-home-banner-slider {
+    position: relative;
+    min-width: 0;
+    height: 380px;
+    overflow: hidden;
+    background: #ececec;
+}
+
+.fv-home-banner-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fv-home-banner-slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.fv-home-banner-slide picture,
+.fv-home-banner-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.fv-home-banner-slide img {
+    object-fit: cover;
+    object-position: center center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fv-home-banner-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transform: translateX(-50%);
+}
+
+.fv-home-banner-dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        width 0.25s ease;
+}
+
+.fv-home-banner-dots button.active {
+    width: 18px;
+    border-radius: 999px;
+    background: #ffffff;
+}
+
+.fv-home-banner-dots button:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.fv-home-app-panel {
+    height: 380px;
+    overflow: hidden;
+    background: #fff7f4;
+    border-left: 1px solid #f0e5e0;
+}
+
+.fv-app-panel-title {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 11px;
+    color: #53200d;
+}
+
+.fv-app-panel-title strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fv-app-panel-logo {
+    width: 35px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    color: #ff5a00;
+    font-size: 27px;
+}
+
+.fv-app-panel-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fv-app-promo-card {
+    min-height: 158px;
+    margin: 0 6px;
+    padding: 9px 10px 10px;
+    border-radius: 3px;
+    background:
+        linear-gradient(
+            155deg,
+            #ff7926 0%,
+            #ff6658 48%,
+            #ff4d98 100%
+        );
+    color: #ffffff;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.fv-app-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.fv-app-rating i {
+    font-size: 7px;
+}
+
+.fv-app-promo-heading {
+    display: block;
+    margin: 7px 0 12px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.fv-app-benefit {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 7px;
+    min-height: 43px;
+}
+
+.fv-app-benefit > span {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #12b8b7;
+    font-size: 14px;
+}
+
+.fv-app-benefit + .fv-app-benefit > span {
+    color: #ff4e75;
+}
+
+.fv-app-benefit strong {
+    font-size: 13px;
+    line-height: 1.05;
+}
+
+.fv-app-download-row {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    gap: 8px;
+    padding: 9px 8px 0;
+}
+
+.fv-app-qr {
+    width: 86px;
+    height: 86px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #ffffff;
+    color: #111111;
+}
+
+.fv-app-qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fv-app-qr > i {
+    font-size: 77px;
+}
+
+.fv-app-store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
+}
+
+.fv-app-store-buttons a {
+    min-height: 26px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 7px;
+    border: 1px solid #b7a7ab;
+    border-radius: 6px;
+    background: #fff2fa;
+    color: #303030;
+    font-size: 9px;
+}
+
+.fv-app-store-buttons i {
+    font-size: 15px;
+}
+
+.fv-app-footer-text {
+    margin: 7px 8px 0;
+    color: #171717;
+    font-size: 8px;
+}
+
+.fv-home-banner-loading {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #848a92;
+    font-size: 11px;
+}
+
+.fv-home-banner-loading i {
+    color: #f85606;
+}
+
+@media (max-width: 1100px) {
+    .fv-home-banner-layout {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .fv-home-banner {
+        background: #ffffff;
+    }
+
+    .fv-home-banner-container {
+        width: 100%;
+    }
+
+    .fv-home-banner-layout {
+        display: block;
+        min-height: 0;
+    }
+
+    .fv-home-banner-slider {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 7;
+        padding: 0 3px;
+        border-radius: 10px;
+    }
+
+    .fv-home-app-panel {
+        display: none !important;
+    }
+
+    .fv-home-banner-dots {
+        bottom: 8px;
+        gap: 5px;
+    }
+
+    .fv-home-banner-dots button {
+        width: 7px;
+        height: 7px;
+    }
+
+    .fv-home-banner-dots button.active {
+        width: 14px;
+    }
+
+    .fv-home-banner-loading {
+        min-height: 160px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fv-home-banner-track {
+        transition: none;
+    }
+
+    .fv-home-banner-dots button {
+        transition: none;
+    }
+}

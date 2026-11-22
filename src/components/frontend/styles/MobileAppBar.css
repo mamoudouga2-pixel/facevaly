@@ -1,0 +1,88 @@
+@media (max-width: 720px) {
+    .mobile-appbar {
+        height: 75px;
+        background: #fff;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 8px 8px 26px;
+        border-bottom: 1px solid #ececf0;
+    }
+
+    .app-id {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .app-id img {
+        width: 46px;
+        height: 46px;
+        border-radius: 9px;
+        object-fit: contain;
+        background: #fff;
+        padding: 2px;
+    }
+
+    .app-id strong {
+        display: block;
+        font-size: 14px;
+        color: #111;
+    }
+
+    .app-id small {
+        display: block;
+        color: #8f8f93;
+        margin-top: 5px;
+    }
+
+    .mobile-appbar button {
+        border: 0;
+        color: #fff;
+        background: var(--orange);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 700;
+        box-shadow: 0 4px 10px rgba(248, 86, 6, 0.25);
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    .mobile-appbar {
+        position: relative;
+        z-index: 120;
+    }
+
+    .mobile-appbar .app-id img {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+.mobile-appbar button,
+.mobile-appbar-seller-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 0 18px;
+
+    border: 0;
+    border-radius: 22px;
+
+    background: #ff5a00;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.mobile-appbar-seller-link:hover {
+    background: #f45100;
+    color: #ffffff;
+}

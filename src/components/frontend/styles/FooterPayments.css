@@ -1,0 +1,129 @@
+.footer-payments {
+background: #fff;
+        padding: 28px 0 38px;
+}
+
+.payment-grid {
+display: grid;
+        grid-template-columns: 1.1fr 0.48fr 1.8fr;
+        gap: 68px;
+        align-items: start;
+}
+
+.payment-icons {
+display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        max-width: 440px;
+        align-items: center;
+}
+
+.payment-badge {
+height: 34px;
+        min-width: 54px;
+        border: 1px solid #e2e4e8;
+        background: #fff;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 8px;
+        overflow: hidden;
+}
+
+.payment-badge img {
+display: block;
+        width: auto;
+        height: 24px;
+        max-width: 74px;
+        object-fit: contain;
+}
+
+.payment-badge.visa img {
+height: 28px;
+        width: 58px;
+        max-width: none;
+        object-fit: cover;
+        object-position: 50% 58%;
+        transform: scale(1.18);
+}
+
+.payment-badge.mastercard img {
+height: 28px;
+        width: 58px;
+        object-fit: cover;
+}
+
+.payment-badge.amex img {
+height: 26px;
+        width: 34px;
+        object-fit: cover;
+}
+
+.payment-badge.bkash img {
+height: 27px;
+        max-width: 72px;
+}
+
+.payment-badge.nagad img {
+height: 24px;
+        max-width: 76px;
+}
+
+.payment-badge.rocket {
+width: 72px;
+}
+
+.payment-badge.rocket img {
+height: 31px;
+        width: 86px;
+        max-width: none;
+        object-fit: cover;
+        object-position: 15% 51%;
+}
+
+.payment-generic {
+gap: 5px;
+        color: #183a66;
+        font-size: 11px;
+        font-weight: 800;
+        white-space: nowrap;
+}
+
+.payment-generic i {
+font-size: 17px;
+        color: var(--orange);
+}
+
+.payment-fallback {
+display: none;
+        font-size: 11px;
+        font-weight: 800;
+        color: #243b63;
+}
+
+.pci {
+display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: #2b6c6d;
+        font-size: 24px;
+        font-weight: 900;
+        transform: skew(-8deg);
+}
+
+.pci i {
+font-size: 22px;
+        color: #31a06d;
+}
+
+.pci b {
+color: #2c4357;
+}
+
+.payment-grid p {
+font-size: 13px;
+        color: #999;
+        line-height: 1.1;
+        margin: 18px 0 0;
+}

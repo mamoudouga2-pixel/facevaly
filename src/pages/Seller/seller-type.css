@@ -1,0 +1,125 @@
+/**
+ * Shared seller-app type scale.
+ * One readable body size across /seller/* — titles step up only slightly.
+ */
+.seller-layout {
+    --seller-fs-page: 1.375rem;   /* 22px — page titles */
+    --seller-fs-section: 1rem;    /* 16px — section / card titles */
+    --seller-fs-value: 1.375rem;  /* 22px — KPI / money figures */
+    --seller-fs-body: 0.875rem;   /* 14px — labels, buttons, cells */
+    --seller-fs-meta: 0.8125rem;  /* 13px — captions, eyebrows, badges */
+
+    /* Alias for older dashboard tokens */
+    --sdb-fs-page: var(--seller-fs-page);
+    --sdb-fs-section: var(--seller-fs-section);
+    --sdb-fs-value: var(--seller-fs-value);
+    --sdb-fs-body: var(--seller-fs-body);
+    --sdb-fs-meta: var(--seller-fs-meta);
+
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--seller-fs-body);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+
+.seller-layout .ss-page,
+.seller-layout .som-page,
+.seller-layout .sp-page,
+.seller-layout .sp-index-page,
+.seller-layout .sp-form-page,
+.seller-layout .sp-show-page,
+.seller-layout .sdb-page {
+    font-size: var(--seller-fs-body);
+}
+
+/* Page titles */
+.seller-layout .ss-page-header h1,
+.seller-layout .som-page-title h1,
+.seller-layout .sp-index-header h1,
+.seller-layout .sp-form-topbar h1,
+.seller-layout .sp-show-header h1 {
+    font-family: Outfit, "Plus Jakarta Sans", sans-serif !important;
+    font-size: var(--seller-fs-page) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+/* Eyebrows / kicker labels */
+.seller-layout .ss-page-header > div:first-child > span,
+.seller-layout .som-page-title > div:first-child > span,
+.seller-layout .sp-index-header > div:first-child > span,
+.seller-layout .sp-show-header > div:first-child > span,
+.seller-layout .sp-eyebrow,
+.seller-layout .sdb-eyebrow {
+    font-size: var(--seller-fs-meta) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em;
+}
+
+/* Supporting copy under titles */
+.seller-layout .ss-page-header p,
+.seller-layout .som-page-title p,
+.seller-layout .sp-index-header p,
+.seller-layout .sp-show-header p,
+.seller-layout .sp-form-topbar p {
+    font-size: var(--seller-fs-body) !important;
+    line-height: 1.5;
+}
+
+/* Section / card titles */
+.seller-layout .ss-card-header h2,
+.seller-layout .ss-card-header h3,
+.seller-layout .ss-section-title,
+.seller-layout .sp-section-title,
+.seller-layout .som-panel-header h2,
+.seller-layout .som-section-title,
+.seller-layout .sdb-section-heading h2,
+.seller-layout .sdb-panel-header h2 {
+    font-family: Outfit, "Plus Jakarta Sans", sans-serif !important;
+    font-size: var(--seller-fs-section) !important;
+    font-weight: 700 !important;
+}
+
+/* Buttons + controls */
+.seller-layout .ss-btn,
+.seller-layout .som-refresh,
+.seller-layout .som-primary-btn,
+.seller-layout .som-secondary-btn,
+.seller-layout .sp-primary-btn,
+.seller-layout .sp-outline-btn,
+.seller-layout .sp-search-btn,
+.seller-layout .sp-add-product-btn,
+.seller-layout .sp-ghost-btn,
+.seller-layout button:not(.adm-mobile-toggle):not(.adm-profile-button),
+.seller-layout .sp-field-label,
+.seller-layout .sp-toggle-label,
+.seller-layout label,
+.seller-layout input,
+.seller-layout select,
+.seller-layout textarea,
+.seller-layout table,
+.seller-layout th,
+.seller-layout td,
+.seller-layout .ss-badge,
+.seller-layout .som-badge,
+.seller-layout .sp-badge,
+.seller-layout .sp-approval {
+    font-size: var(--seller-fs-body);
+}
+
+.seller-layout th {
+    font-size: var(--seller-fs-meta);
+    font-weight: 700;
+}
+
+.seller-layout input,
+.seller-layout select,
+.seller-layout textarea {
+    font-size: var(--seller-fs-body) !important;
+}
+
+/* Keep notification pill readable but compact */
+.seller-layout .seller-notification-count {
+    font-size: 0.625rem !important;
+}

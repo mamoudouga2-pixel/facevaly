@@ -1,0 +1,134 @@
+.fv-policy {
+    width: min(940px, calc(100% - 24px));
+    margin: 28px auto 48px;
+    padding: 26px 22px 32px;
+    border: 1px solid #e6ebf5;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(17, 28, 52, 0.08);
+    color: #1e2b52;
+}
+
+.fv-policy__eyebrow {
+    margin: 0;
+    color: #ff5a00;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.fv-policy__title {
+    margin: 10px 0 8px;
+    font-size: clamp(24px, 2.4vw, 34px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.fv-policy__intro {
+    margin: 0 0 22px;
+    color: #5f6c8b;
+    line-height: 1.7;
+    max-width: 72ch;
+}
+
+.fv-policy__updated {
+    margin: 0 0 24px;
+    color: #8a94ad;
+    font-size: 13px;
+}
+
+.fv-policy__section {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid #edf1f8;
+}
+
+.fv-policy__section:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.fv-policy__section h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #24345f;
+}
+
+.fv-policy__section p,
+.fv-policy__section li {
+    margin: 0;
+    color: #4f5d7d;
+    line-height: 1.75;
+    font-size: 15px;
+}
+
+.fv-policy__section p + p {
+    margin-top: 10px;
+}
+
+.fv-policy__section ul,
+.fv-policy__section ol {
+    margin: 10px 0 0;
+    padding-left: 20px;
+}
+
+.fv-policy__section li + li {
+    margin-top: 6px;
+}
+
+.fv-policy__links {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fv-policy__link {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid #dfe6f3;
+    color: #425176;
+    font-weight: 700;
+    font-size: 13px;
+    transition:
+        border-color 0.16s ease,
+        color 0.16s ease,
+        background 0.16s ease;
+}
+
+.fv-policy__link:hover {
+    border-color: #ffbe9b;
+    background: #fff8f4;
+    color: #d14e00;
+}
+
+.fv-policy__link--primary {
+    border-color: #ffbe9b;
+    background: #fff3ec;
+    color: #d14e00;
+}
+
+@media (max-width: 720px) {
+    .fv-policy {
+        margin: 16px auto 36px;
+        padding: 20px 16px 26px;
+        border-radius: 14px;
+    }
+
+    .fv-policy__section h2 {
+        font-size: 17px;
+    }
+
+    .fv-policy__section p,
+    .fv-policy__section li {
+        font-size: 14px;
+    }
+}

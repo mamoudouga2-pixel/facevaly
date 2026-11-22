@@ -1,0 +1,253 @@
+.fv-cart-summary {
+    padding: 18px 14px;
+    border: 1px solid #e5eaf3;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(15, 23, 72, 0.06);
+    animation: fv-cart-summary-in 0.5s ease 0.14s both;
+}
+
+@keyframes fv-cart-summary-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fv-cart-summary h2 {
+    margin: 0 0 18px;
+    color: #0f1748;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.fv-cart-summary-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 35px;
+    color: #6d737d;
+    font-size: 11px;
+    transition: color 0.2s ease;
+}
+
+.fv-cart-summary-line strong {
+    color: #111;
+    font-weight: 500;
+}
+
+.fv-cart-voucher {
+    display: grid;
+    grid-template-columns: 1fr 105px;
+    gap: 8px;
+    margin: 20px 13px 17px;
+}
+
+.fv-cart-voucher input {
+    min-width: 0;
+    height: 41px;
+    padding: 0 10px;
+    border: 1px solid #d9dde2;
+    border-radius: 6px;
+    outline: 0;
+    font-size: 11px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fv-cart-voucher input:focus {
+    border-color: #ff5a00;
+    box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.12);
+}
+
+.fv-cart-voucher button {
+    border: 0;
+    border-radius: 6px;
+    background: #2aa8cf;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fv-cart-voucher button:hover:not(:disabled) {
+    background: #2298bd;
+    box-shadow: 0 4px 12px rgba(42, 168, 207, 0.3);
+    transform: translateY(-1px);
+}
+
+.fv-cart-voucher button:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.fv-cart-coupon-success {
+    margin: -8px 13px 10px;
+    color: #059669;
+    font-size: 10px;
+}
+
+.fv-cart-summary-line.total {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #e5eaf3;
+    color: #111;
+}
+
+.fv-cart-summary-line.total strong {
+    color: #ff5a00;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.fv-cart-checkout-btn {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff5a00 0%, #f57224 100%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.fv-cart-checkout-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e94c00 0%, #e8651a 100%);
+    box-shadow: 0 10px 24px rgba(255, 90, 0, 0.32);
+    transform: translateY(-2px);
+}
+
+.fv-cart-checkout-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.fv-cart-checkout-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.fv-cart-mobile-bar {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .fv-cart-summary {
+        display: none;
+    }
+
+    .fv-cart-mobile-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 52px;
+        padding: 6px 10px calc(6px + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid #e8e8e8;
+        background: #fff;
+        box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .fv-cart-mobile-bar-all {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+        color: #212121;
+        font-size: 13px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .fv-cart-mobile-bar-all input {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+    }
+
+    .fv-cart-mobile-bar-end {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        min-width: 0;
+        margin-left: auto;
+    }
+
+    .fv-cart-mobile-bar-totals {
+        min-width: 0;
+        text-align: right;
+        line-height: 1.25;
+    }
+
+    .fv-cart-mobile-bar-subtotal {
+        color: #212121;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .fv-cart-mobile-bar-subtotal strong {
+        color: #f06292;
+        font-weight: 700;
+    }
+
+    .fv-cart-mobile-bar-ship {
+        margin-top: 2px;
+        color: #9e9e9e;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .fv-cart-mobile-checkout {
+        flex: 0 0 auto;
+        min-width: 126px;
+        height: 40px;
+        padding: 0 16px;
+        border: 0;
+        border-radius: 2px;
+        background: #ff6a00;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .fv-cart-mobile-checkout:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+    .fv-cart-mobile-checkout:active:not(:disabled) {
+        transform: scale(0.98);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fv-cart-summary {
+        animation: none;
+    }
+
+    .fv-cart-checkout-btn:hover:not(:disabled),
+    .fv-cart-voucher button:hover:not(:disabled) {
+        transform: none;
+    }
+}

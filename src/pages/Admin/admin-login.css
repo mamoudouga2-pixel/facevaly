@@ -1,0 +1,1230 @@
+/* =========================================================
+   FACEVALY ADMIN LOGIN
+   Custom CSS
+========================================================= */
+
+.fal-page,
+.fal-page * {
+    box-sizing: border-box;
+}
+
+
+.fal-page {
+    --fal-blue: #ff620d;
+    --fal-blue-hover: #e8570a;
+    --fal-blue-dark: #c44d0a;
+
+    --fal-orange: #ff5a00;
+
+    --fal-text: #18233b;
+    --fal-muted: #7a879c;
+
+    --fal-input-bg: #edf4ff;
+    --fal-input-border: #d5e0ef;
+
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 0;
+
+    color: var(--fal-text);
+
+    background: #0c3265;
+
+    font-family:
+        "Plus Jakarta Sans",
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+}
+
+
+/* =========================================================
+   RESET INSIDE PAGE
+========================================================= */
+
+.fal-page a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.fal-page button,
+.fal-page input {
+    font: inherit;
+}
+
+
+.fal-page button {
+    cursor: pointer;
+}
+
+
+.fal-page svg {
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ONLINE BACKGROUND
+========================================================= */
+
+.fal-background {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    /*
+     * Online Unsplash background
+     */
+    background-image:
+        url("https://images.unsplash.com/photo-1776875097847-49bd9bcf1eca?auto=format&fit=crop&fm=jpg&q=84&w=2400");
+
+    background-position:
+        center center;
+
+    background-repeat:
+        no-repeat;
+
+    background-size:
+        cover;
+
+    transform:
+        scale(1.02);
+}
+
+
+/* =========================================================
+   BLUE OVERLAY
+========================================================= */
+
+.fal-background-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(36, 156, 218, 0.76) 0%,
+            rgba(78, 179, 231, 0.72) 45%,
+            rgba(41, 134, 198, 0.76) 100%
+        );
+
+    backdrop-filter:
+        blur(1px);
+}
+
+
+/* =========================================================
+   DECORATIVE POLYGONS
+========================================================= */
+
+.fal-shape {
+    position: fixed;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    opacity: 0.13;
+
+    background:
+        #ffffff;
+
+    clip-path:
+        polygon(
+            50% 0%,
+            100% 38%,
+            82% 100%,
+            20% 88%,
+            0% 34%
+        );
+}
+
+
+.fal-shape-one {
+    width: 380px;
+    height: 380px;
+
+    top: -130px;
+    left: -120px;
+
+    transform:
+        rotate(15deg);
+}
+
+
+.fal-shape-two {
+    width: 460px;
+    height: 460px;
+
+    right: -180px;
+    top: 70px;
+
+    opacity: 0.08;
+
+    transform:
+        rotate(-18deg);
+}
+
+
+.fal-shape-three {
+    width: 350px;
+    height: 350px;
+
+    bottom: -180px;
+    left: 32%;
+
+    opacity: 0.07;
+
+    transform:
+        rotate(22deg);
+}
+
+
+/* =========================================================
+   PAGE MAIN
+========================================================= */
+
+.fal-main {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding:
+        40px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   WHITE CARD
+========================================================= */
+
+.fal-card {
+    width: min(
+        100%,
+        520px
+    );
+
+    padding:
+        44px 44px 34px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.985
+        );
+
+    box-shadow:
+        0 28px 80px
+        rgba(
+            7,
+            47,
+            86,
+            0.28
+        );
+
+    animation:
+        falCardEnter
+        0.45s ease;
+}
+
+
+@keyframes falCardEnter {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.fal-logo-section {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.fal-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #252c37;
+}
+
+
+/* FACEVALY MARK */
+
+.fal-brand-symbol {
+    position: relative;
+
+    width: 49px;
+    height: 55px;
+
+    flex-shrink: 0;
+}
+
+
+.fal-brand-symbol i {
+    position: absolute;
+
+    display: block;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff781f,
+            var(--fal-orange)
+        );
+
+    box-shadow:
+        0 4px 12px
+        rgba(
+            255,
+            90,
+            0,
+            0.17
+        );
+}
+
+
+.fal-brand-symbol i:nth-child(1) {
+    width: 19px;
+    height: 24px;
+
+    top: 0;
+    left: 0;
+}
+
+
+.fal-brand-symbol i:nth-child(2) {
+    width: 19px;
+    height: 24px;
+
+    bottom: 0;
+    left: 0;
+}
+
+
+.fal-brand-symbol i:nth-child(3) {
+    width: 19px;
+    height: 33px;
+
+    top: 11px;
+    right: 1px;
+}
+
+
+/* BRAND TEXT */
+
+.fal-brand-text {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1;
+}
+
+
+.fal-brand-text strong {
+    color: #2d3138;
+
+    font-size: 38px;
+    font-weight: 750;
+
+    letter-spacing:
+        -1.6px;
+}
+
+
+.fal-brand-text small {
+    margin-top: 7px;
+
+    color: #a4a5a8;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing:
+        4px;
+}
+
+
+.fal-login-caption {
+    margin:
+        19px 0 0;
+
+    color: #8b96a8;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing:
+        0.5px;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.fal-form {
+    margin: 0;
+}
+
+
+.fal-field {
+    margin-bottom: 22px;
+}
+
+
+.fal-field label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #1d2841;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.fal-input-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--fal-input-border);
+
+    border-radius: 8px;
+
+    background:
+        var(--fal-input-bg);
+
+    transition:
+        border-color
+        0.2s ease,
+        box-shadow
+        0.2s ease,
+        background
+        0.2s ease;
+}
+
+
+.fal-input-wrapper:focus-within {
+    border-color:
+        #6bb9e8;
+
+    background:
+        #f3f8ff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            73,
+            172,
+            229,
+            0.12
+        );
+}
+
+
+/* INPUT ICON */
+
+.fal-input-icon {
+    width: 48px;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #8ba1ba;
+}
+
+
+.fal-input-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* INPUT */
+
+.fal-input-wrapper input {
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+
+    padding:
+        0 15px 0 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background:
+        transparent;
+
+    color: #1e2a40;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.fal-input-wrapper input::placeholder {
+    color: #a3afc1;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.fal-password-toggle {
+    width: 52px;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        transparent;
+
+    color: #75abc8;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.fal-password-toggle:hover {
+    color: #318fc5;
+
+    background:
+        rgba(
+            84,
+            174,
+            226,
+            0.08
+        );
+}
+
+
+.fal-password-toggle svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* =========================================================
+   REMEMBER
+========================================================= */
+
+.fal-options {
+    margin:
+        -3px 0 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+}
+
+
+.fal-remember {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #778397;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+.fal-remember input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.fal-checkbox {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        #c8d5e4;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: transparent;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.fal-checkbox svg {
+    width: 12px;
+    height: 12px;
+
+    stroke-width: 3;
+}
+
+
+.fal-remember
+input:checked +
+.fal-checkbox {
+    border-color:
+        #54afe4;
+
+    background:
+        #54afe4;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.fal-submit {
+    width: 100%;
+    min-height: 64px;
+
+    padding:
+        0 24px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5db7e9,
+            #4ca9e0
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    box-shadow:
+        0 10px 24px
+        rgba(
+            74,
+            169,
+            224,
+            0.18
+        );
+
+    transition:
+        transform
+        0.2s ease,
+        background
+        0.2s ease,
+        box-shadow
+        0.2s ease;
+}
+
+
+.fal-submit:hover:not(:disabled) {
+    transform:
+        translateY(-1px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #4daee5,
+            #3d9ed8
+        );
+
+    box-shadow:
+        0 13px 28px
+        rgba(
+            60,
+            156,
+            214,
+            0.26
+        );
+}
+
+
+.fal-submit:active:not(:disabled) {
+    transform:
+        translateY(0);
+}
+
+
+.fal-submit:disabled {
+    opacity: 0.68;
+
+    cursor:
+        not-allowed;
+}
+
+
+.fal-submit svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.fal-error {
+    margin-bottom: 20px;
+
+    padding:
+        12px 14px;
+
+    border:
+        1px solid
+        #ffc8c8;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    background:
+        #fff3f3;
+
+    color: #c94141;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+.fal-error-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+}
+
+
+.fal-error-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.fal-bottom {
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #edf0f4;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.fal-security {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #9aa4b3;
+
+    font-size: 10px;
+}
+
+
+.fal-security svg {
+    width: 14px;
+    height: 14px;
+
+    color: #49a677;
+}
+
+
+.fal-marketplace-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #6698ba;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.fal-marketplace-link:hover {
+    color: #2889bf;
+}
+
+
+.fal-marketplace-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.fal-spinner {
+    width: 18px;
+    height: 18px;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.4
+        );
+
+    border-top-color:
+        #ffffff;
+
+    border-radius: 50%;
+
+    animation:
+        falSpin
+        0.7s linear infinite;
+}
+
+
+@keyframes falSpin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   INITIAL SESSION CHECK
+========================================================= */
+
+.fal-checking-card {
+    position: relative;
+
+    z-index: 10;
+
+    width:
+        min(
+            calc(100% - 30px),
+            470px
+        );
+
+    min-height: 310px;
+
+    margin:
+        0 auto;
+
+    padding:
+        45px 30px;
+
+    border-radius:
+        30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.985
+        );
+
+    box-shadow:
+        0 28px 80px
+        rgba(
+            7,
+            47,
+            86,
+            0.28
+        );
+}
+
+
+.fal-page:has(.fal-checking-card) {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.fal-check-spinner {
+    width: 38px;
+    height: 38px;
+
+    margin-top: 35px;
+
+    border:
+        4px solid #e5eef7;
+
+    border-top-color:
+        #51afe6;
+
+    border-radius: 50%;
+
+    animation:
+        falSpin
+        0.75s linear infinite;
+}
+
+
+.fal-checking-card p {
+    margin:
+        14px 0 0;
+
+    color: #8895a8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+    max-width: 650px
+) {
+
+    .fal-main {
+        padding:
+            24px 14px;
+    }
+
+
+    .fal-card {
+        width: 100%;
+
+        padding:
+            34px 24px 27px;
+
+        border-radius:
+            24px;
+    }
+
+
+    .fal-brand {
+        gap: 11px;
+    }
+
+
+    .fal-brand-symbol {
+        width: 39px;
+        height: 47px;
+    }
+
+
+    .fal-brand-symbol i:nth-child(1),
+    .fal-brand-symbol i:nth-child(2) {
+        width: 15px;
+        height: 20px;
+    }
+
+
+    .fal-brand-symbol i:nth-child(3) {
+        width: 15px;
+        height: 28px;
+
+        top: 9px;
+    }
+
+
+    .fal-brand-text strong {
+        font-size: 30px;
+
+        letter-spacing:
+            -1px;
+    }
+
+
+    .fal-brand-text small {
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing:
+            2.6px;
+    }
+
+
+    .fal-field {
+        margin-bottom: 19px;
+    }
+
+
+    .fal-field label {
+        font-size: 14px;
+    }
+
+
+    .fal-input-wrapper {
+        height: 55px;
+    }
+
+
+    .fal-submit {
+        min-height: 57px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+@media (
+    max-width: 390px
+) {
+
+    .fal-card {
+        padding:
+            29px 18px 24px;
+    }
+
+
+    .fal-brand-text strong {
+        font-size: 27px;
+    }
+
+
+    .fal-brand-text small {
+        letter-spacing:
+            2px;
+    }
+
+
+    .fal-brand-symbol {
+        width: 34px;
+
+        transform:
+            scale(0.9);
+    }
+
+
+    .fal-logo-section {
+        margin-bottom: 25px;
+    }
+
+
+    .fal-input-icon {
+        width: 42px;
+    }
+
+
+    .fal-options {
+        margin-bottom: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+
+    .fal-card,
+    .fal-spinner,
+    .fal-check-spinner {
+        animation: none;
+    }
+
+
+    .fal-submit,
+    .fal-input-wrapper,
+    .fal-marketplace-link {
+        transition: none;
+    }
+
+}

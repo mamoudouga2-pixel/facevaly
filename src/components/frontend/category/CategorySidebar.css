@@ -1,0 +1,124 @@
+.fv-category-sidebar {
+    width: 190px;
+    flex: 0 0 190px;
+    color: var(--fv-text);
+    position: sticky;
+    top: 88px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    padding: 18px 16px;
+    border: 1px solid var(--fv-border);
+    border-radius: 8px;
+    background: var(--fv-white);
+    scrollbar-width: thin;
+}
+
+.fv-sidebar-category-section,
+.fv-sidebar-filter-section {
+    padding: 0 0 16px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.fv-sidebar-category-section h3,
+.fv-sidebar-filter-section h3 {
+    margin: 0 0 9px;
+    color: #121212;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fv-sidebar-category-section a {
+    display: block;
+    margin-bottom: 6px;
+    color: #6c717a;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.fv-sidebar-category-section a:hover {
+    color: #f85606;
+}
+
+.fv-sidebar-category-section button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #0093c5;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fv-filter-checkbox {
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #4b5058;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.fv-filter-checkbox input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: var(--fv-orange);
+}
+
+.fv-price-values {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 4px 12px;
+    color: #111;
+    font-size: 11px;
+}
+
+.fv-price-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.fv-price-inputs input {
+    width: 100%;
+    height: 31px;
+    padding: 0 6px;
+    border: 1px solid #d8dde3;
+    border-radius: 4px;
+    outline: 0;
+    font-size: 10px;
+}
+
+.fv-price-inputs input:focus {
+    border-color: #f85606;
+}
+
+.fv-clear-filter-btn {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #f85606;
+    border-radius: 8px;
+    background: #fff;
+    color: #f85606;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.fv-clear-filter-btn:hover {
+    background: #fff5ef;
+}
+
+@media (max-width: 850px) {
+    .fv-category-sidebar {
+        width: 180px;
+        flex-basis: 180px;
+    }
+}
+
+@media (max-width: 720px) {
+    .fv-category-sidebar {
+        width: 100%;
+        flex-basis: auto;
+    }
+}

@@ -1,0 +1,120 @@
+.fv-flash-card {
+    min-width: 0;
+    background: #ffffff;
+    color: #212121;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fv-flash-card:hover {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-2px);
+    background: #fff8f4;
+    box-shadow:
+        inset 0 0 0 2px #ff5a00,
+        0 8px 22px rgba(255, 90, 0, 0.12);
+}
+
+.fv-flash-card-image {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.fv-flash-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fv-flash-card-image > span {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #fafafa;
+    color: #c2c7ce;
+    font-size: 30px;
+}
+
+.fv-flash-card-body {
+    padding: 8px 9px 12px;
+}
+
+.fv-flash-card-title {
+    min-height: 38px;
+    display: -webkit-box;
+    overflow: hidden;
+    color: #171717;
+    font-size: 13px;
+    line-height: 1.38;
+    font-weight: 400;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.fv-flash-card-title:hover {
+    color: #f85606;
+}
+
+.fv-flash-card-price {
+    margin-top: 5px;
+    color: #f85606;
+    font-size: 18px;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.fv-flash-card-old-price {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+    color: #8d8d8d;
+    font-size: 10px;
+}
+
+.fv-flash-card-old-price del {
+    color: #989898;
+}
+
+.fv-flash-card-old-price span {
+    color: #555555;
+}
+
+@media (max-width: 900px) {
+    .fv-flash-card-image {
+        height: 175px;
+    }
+}
+
+@media (max-width: 720px) {
+    .fv-flash-card-image {
+        height: 145px;
+    }
+
+    .fv-flash-card-body {
+        padding: 7px 7px 10px;
+    }
+
+    .fv-flash-card-title {
+        min-height: 34px;
+        font-size: 11px;
+    }
+
+    .fv-flash-card-price {
+        font-size: 15px;
+    }
+
+    .fv-flash-card-old-price {
+        font-size: 9px;
+    }
+}

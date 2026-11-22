@@ -1,0 +1,696 @@
+/*
+|--------------------------------------------------------------------------
+| FACEVALY FOOTER
+|--------------------------------------------------------------------------
+|
+| One continuous surface. Hierarchy comes from spacing and type scale, so
+| there is exactly one rule in the whole footer: above the legal line.
+|
+*/
+
+.fv-ft {
+    --ftr-abyss: #070b1f;
+    --ftr-ridge: #101736;
+    --ftr-seam: rgba(255, 255, 255, 0.09);
+    --ftr-ember: #ff5a00;
+    --ftr-glow: #ff8b3d;
+    --ftr-mist: #9fa8c9;
+    --ftr-clear: #f2f4fb;
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    background: var(--ftr-abyss);
+    color: var(--ftr-mist);
+    font-family: var(--fv-font-ui, "Plus Jakarta Sans", sans-serif);
+}
+
+.fv-ft__shell {
+    width: var(--fv-page-width);
+    margin-inline: auto;
+    padding-top: 58px;
+}
+
+.fv-ft a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.fv-ft a:focus-visible,
+.fv-ft summary:focus-visible {
+    outline: 2px solid var(--ftr-ember);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.fv-ft__eyebrow {
+    display: block;
+    color: var(--ftr-ember);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| MASTHEAD
+|--------------------------------------------------------------------------
+*/
+
+.fv-ft__masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.82fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.fv-ft__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.fv-ft__brand img {
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    border-radius: 10px;
+    background: #ffffff;
+    object-fit: contain;
+}
+
+.fv-ft__brand strong {
+    color: var(--ftr-clear);
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.fv-ft__statement h2 {
+    max-width: 30ch;
+    margin: 22px 0 0;
+    color: var(--ftr-clear);
+    font-size: clamp(19px, 1.7vw, 25px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.fv-ft__statement p {
+    max-width: 62ch;
+    margin: 14px 0 0;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.fv-ft__app p {
+    margin: 12px 0 0;
+    color: var(--ftr-clear);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.fv-ft__stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.fv-ft__store {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 0 14px;
+    border: 1px solid var(--ftr-seam);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.fv-ft__store:hover {
+    border-color: rgba(255, 90, 0, 0.55);
+    background: rgba(255, 90, 0, 0.08);
+}
+
+.fv-ft__store i {
+    color: var(--ftr-clear);
+    font-size: 19px;
+}
+
+.fv-ft__store span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.fv-ft__store small {
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.fv-ft__store strong {
+    color: var(--ftr-clear);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| NAVIGATION
+|--------------------------------------------------------------------------
+*/
+
+.fv-ft__nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 52px;
+}
+
+.fv-ft__group summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--ftr-clear);
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    list-style: none;
+}
+
+.fv-ft__group summary::-webkit-details-marker {
+    display: none;
+}
+
+.fv-ft__group summary i {
+    display: none;
+    color: var(--ftr-mist);
+    font-size: 11px;
+    transition: transform 0.25s ease;
+}
+
+.fv-ft__group ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 15px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fv-ft__group a {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.35;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    transition: background-size 0.3s ease, color 0.2s ease;
+}
+
+.fv-ft__group a:hover {
+    color: var(--ftr-clear);
+    background-size: 100% 1px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| TRUST CAPSULE
+|--------------------------------------------------------------------------
+|
+| Payments, certification and registration used to be three separate bands.
+| They are one object now because they answer one question: is this safe?
+|
+*/
+
+.fv-ft__trust {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 32px;
+    margin-top: 48px;
+    padding: 26px 28px;
+    border: 1px solid var(--ftr-seam);
+    border-radius: 20px;
+    background: var(--ftr-ridge);
+}
+
+.fv-ft__pay-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.fv-ft__pay-row {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+}
+
+.fv-ft__pay-caption {
+    font-size: 11.5px;
+    line-height: 1.3;
+}
+
+.fv-ft__methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fv-ft__method {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid var(--ftr-seam);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--ftr-clear);
+    font-size: 11.5px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.fv-ft__method i {
+    color: var(--ftr-glow);
+    font-size: 14px;
+}
+
+.fv-ft__assurance {
+    min-width: 232px;
+    padding-left: 32px;
+    border-left: 1px solid var(--ftr-seam);
+}
+
+.fv-ft__seal {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 18px;
+}
+
+.fv-ft__seal i {
+    color: #2ee08a;
+    font-size: 26px;
+}
+
+.fv-ft__seal span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.fv-ft__seal strong {
+    color: var(--ftr-clear);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.fv-ft__seal small {
+    font-size: 11px;
+}
+
+.fv-ft__dbid {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 18px;
+    font-size: 11px;
+}
+
+.fv-ft__dbid strong {
+    color: var(--ftr-clear);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| DISCOVERY
+|--------------------------------------------------------------------------
+*/
+
+.fv-ft__discovery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 34px;
+    margin-top: 44px;
+}
+
+.fv-ft__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.fv-ft__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    max-width: 100%;
+    height: 31px;
+    padding: 0 13px;
+    border: 1px solid var(--ftr-seam);
+    border-radius: 999px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.fv-ft__chip:hover {
+    border-color: rgba(255, 90, 0, 0.6);
+    color: var(--ftr-clear);
+    transform: translateY(-1px);
+}
+
+.fv-ft__chip--wide {
+    display: inline-block;
+    max-width: 230px;
+    overflow: hidden;
+    line-height: 29px;
+    text-overflow: ellipsis;
+}
+
+.fv-ft__chip--ghost {
+    border-color: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.03)
+        )
+        0 0 / 220% 100%;
+    animation: fv-ft-shimmer 1.4s linear infinite;
+}
+
+@keyframes fv-ft-shimmer {
+    to {
+        background-position: -220% 0;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| LEGAL
+|--------------------------------------------------------------------------
+*/
+
+.fv-ft__base {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 46px;
+    padding: 22px 0;
+    border-top: 1px solid var(--ftr-seam);
+}
+
+.fv-ft__legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 18px;
+    font-size: 12.5px;
+}
+
+.fv-ft__credit {
+    color: var(--ftr-mist);
+}
+
+.fv-ft__studio {
+    color: var(--ftr-abyss);
+    background: linear-gradient(
+        transparent 62%,
+        var(--ftr-glow) 62%
+    );
+    font-weight: 800;
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+.fv-ft__studio:hover {
+    color: #ffffff;
+    background: var(--ftr-ember);
+}
+
+.fv-ft__social {
+    display: flex;
+    gap: 9px;
+}
+
+.fv-ft__social a {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--ftr-seam);
+    border-radius: 50%;
+    font-size: 13px;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.fv-ft__social a:hover {
+    border-color: var(--ftr-ember);
+    background: var(--ftr-ember);
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| SIGNATURE
+|--------------------------------------------------------------------------
+|
+| The wordmark is cropped by the bottom edge of the page: the footer reads
+| as a closing statement rather than a trailing strip of small print.
+|
+*/
+
+.fv-ft__monolith {
+    display: flex;
+    justify-content: center;
+    height: clamp(46px, 7.4vw, 100px);
+    overflow: hidden;
+}
+
+.fv-ft__monolith span {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 90, 0, 0.34),
+        rgba(255, 255, 255, 0.03)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: var(--fv-font-brand, "Outfit", sans-serif);
+    font-size: clamp(88px, 15.5vw, 210px);
+    font-weight: 800;
+    line-height: 0.75;
+    letter-spacing: -0.055em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| TABLET
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 1080px) {
+
+    .fv-ft__masthead {
+        gap: 40px;
+    }
+
+    .fv-ft__nav {
+        gap: 24px;
+    }
+
+    .fv-ft__trust {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+    }
+
+    .fv-ft__assurance {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 12px 40px;
+        min-width: 0;
+        padding-left: 0;
+        padding-top: 24px;
+        border-left: 0;
+        border-top: 1px solid var(--ftr-seam);
+    }
+
+    .fv-ft__assurance .fv-ft__eyebrow {
+        flex: 1 0 100%;
+    }
+
+    .fv-ft__seal,
+    .fv-ft__dbid {
+        margin-top: 0;
+    }
+
+    .fv-ft__discovery {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .fv-ft__discovery > :last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| COMPACT — LINK GROUPS BECOME ACCORDIONS
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 860px) {
+
+    .fv-ft__shell {
+        padding-top: 40px;
+    }
+
+    .fv-ft__masthead {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+    }
+
+    .fv-ft__statement h2 {
+        max-width: none;
+    }
+
+    .fv-ft__store {
+        flex: 1 1 150px;
+    }
+
+    .fv-ft__nav {
+        display: block;
+        margin-top: 34px;
+        border-top: 1px solid var(--ftr-seam);
+    }
+
+    .fv-ft__group {
+        border-bottom: 1px solid var(--ftr-seam);
+    }
+
+    .fv-ft__group summary {
+        min-height: 52px;
+        padding: 6px 2px;
+        cursor: pointer;
+    }
+
+    .fv-ft__group summary i {
+        display: block;
+    }
+
+    .fv-ft__group[open] summary i {
+        transform: rotate(180deg);
+    }
+
+    .fv-ft__group ul {
+        margin: 2px 0 18px;
+        gap: 13px;
+    }
+
+    .fv-ft__trust {
+        margin-top: 34px;
+        padding: 22px 20px;
+    }
+
+    .fv-ft__pay-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .fv-ft__discovery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+        margin-top: 34px;
+    }
+
+    .fv-ft__discovery > :last-child {
+        grid-column: auto;
+    }
+
+    .fv-ft__base {
+        margin-top: 30px;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| MOBILE
+|--------------------------------------------------------------------------
+|
+| The fixed bottom navigation overlaps the last 66px of the page.
+|
+*/
+
+@media (max-width: 720px) {
+
+    .fv-ft {
+        display: block !important;
+        padding-bottom: 72px;
+    }
+
+    .fv-ft__shell {
+        width: 100%;
+        padding-inline: 18px;
+    }
+
+    .fv-ft__base {
+        justify-content: flex-start;
+    }
+
+    .fv-ft__chip--wide {
+        max-width: 100%;
+    }
+
+    .fv-ft__monolith {
+        height: auto;
+        overflow: visible;
+        padding: 10px 18px 4px;
+    }
+
+    .fv-ft__monolith span {
+        font-size: clamp(34px, 10.5vw, 48px);
+        line-height: 1;
+        letter-spacing: -0.04em;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fv-ft * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

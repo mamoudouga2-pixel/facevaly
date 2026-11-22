@@ -1,0 +1,144 @@
+.fv-hbm-page {
+    padding: 20px;
+    background: #f5f7fa;
+    color: #273142;
+}
+
+.fv-hbm-head {
+    margin-bottom: 15px;
+}
+
+.fv-hbm-head h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.fv-hbm-head p {
+    margin: 4px 0 0;
+    color: #818895;
+    font-size: 12px;
+}
+
+.fv-hbm-card {
+    margin-bottom: 15px;
+    padding: 17px;
+    border: 1px solid #dfe4ea;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.fv-hbm-card h2 {
+    margin: 0 0 14px;
+    font-size: 15px;
+}
+
+.fv-hbm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+}
+
+.fv-hbm-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fv-hbm-grid label > span {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.fv-hbm-grid input {
+    min-height: 39px;
+    padding: 6px 9px;
+    border: 1px solid #d7dde4;
+    outline: 0;
+}
+
+.fv-hbm-grid input:focus {
+    border-color: #f85606;
+}
+
+.fv-hbm-card > button {
+    min-height: 39px;
+    margin-top: 14px;
+    padding: 0 15px;
+    border: 0;
+    border-radius: 4px;
+    background: #f85606;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.fv-hbm-slides article {
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 100px 80px;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #eceff3;
+}
+
+.fv-hbm-slides article > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.fv-hbm-slides strong {
+    font-size: 11px;
+}
+
+.fv-hbm-slides small {
+    color: #969daa;
+    font-size: 9px;
+}
+
+.fv-hbm-slides button {
+    min-height: 31px;
+    border: 1px solid #d7dde4;
+    background: #ffffff;
+}
+
+.fv-hbm-slides button.delete {
+    color: #dc2626;
+}
+
+.fv-hbm-check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 11px;
+    font-size: 11px;
+}
+
+.fv-hbm-alert {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+}
+
+.fv-hbm-alert.error {
+    background: #fff1f2;
+    color: #b42318;
+}
+
+.fv-hbm-alert.success {
+    background: #ecfdf3;
+    color: #067647;
+}
+
+.fv-hbm-loading {
+    min-height: 400px;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 720px) {
+    .fv-hbm-page {
+        padding: 12px;
+    }
+
+    .fv-hbm-grid {
+        grid-template-columns: 1fr;
+    }
+}

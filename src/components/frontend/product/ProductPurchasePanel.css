@@ -1,0 +1,44 @@
+.fv-product-purchase { min-width: 0; padding: 8px 18px 18px; }
+.fv-product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.fv-product-title-row h1 { margin: 0; color: #191919; font-size: 22px; line-height: 1.35; font-weight: 500; }
+.fv-product-title-actions { display: flex; gap: 5px; }
+.fv-product-title-actions button { width: 28px; height: 28px; border: 0; background: transparent; color: #9a9ea4; font-size: 17px; }
+.fv-product-rating-row { display: flex; align-items: center; gap: 9px; margin-top: 26px; padding-bottom: 16px; border-bottom: 1px solid #eceef0; font-size: 11px; }
+.fv-purchase-stars { display: flex; color: #f9b61f; }
+.fv-purchase-stars i { font-size: 10px; }
+.fv-product-rating-row a { color: #006af5; }
+.fv-product-rating-row > span:last-child { color: #8c929b; }
+.fv-product-brand { margin-top: 14px; color: #8b8f97; font-size: 11px; }
+.fv-product-brand a { color: #006af5; }
+.fv-product-price-box { padding: 20px 0 16px; }
+.fv-product-price-box > strong { color: #f85606; font-size: 30px; font-weight: 400; }
+.fv-product-price-box > div { display: flex; gap: 7px; margin-top: 2px; font-size: 11px; }
+.fv-product-price-box del { color: #999da4; }
+.fv-product-promotions { min-height: 45px; display: flex; align-items: center; gap: 20px; padding: 7px 0; border-top: 1px solid #eceef0; border-bottom: 1px solid #eceef0; font-size: 11px; }
+.fv-product-promotions > span { color: #898e97; }
+.fv-product-promotions strong { padding: 5px 9px; background: #ff7426; color: #fff; font-weight: 500; }
+.fv-product-variant-row { display: grid; grid-template-columns: 85px 1fr; gap: 8px; align-items: start; margin-top: 14px; font-size: 11px; }
+.fv-product-variant-row > span { padding-top: 7px; color: #81868f; }
+.fv-product-variant-values { display: flex; flex-wrap: wrap; gap: 7px; }
+.fv-product-variant-values button { min-height: 32px; display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; border: 1px solid #d8dce1; background: #fff; color: #4e535b; font-size: 10px; }
+.fv-product-variant-values button.active { border-color: #f85606; color: #f85606; }
+.fv-product-variant-values button i { width: 13px; height: 13px; border: 1px solid #ddd; border-radius: 50%; }
+.fv-product-quantity-row { display: grid; grid-template-columns: 85px auto 1fr; align-items: center; gap: 8px; margin-top: 20px; color: #81868f; font-size: 11px; }
+.fv-product-quantity { display: grid; grid-template-columns: 35px 38px 35px; height: 34px; }
+.fv-product-quantity button, .fv-product-quantity strong { display: grid; place-items: center; border: 0; background: #f2f3f5; color: #9ca1a8; font-size: 18px; font-weight: 400; }
+.fv-product-quantity strong { background: #fff; color: #111; font-size: 12px; }
+.fv-product-quantity-row small { color: #9499a1; }
+.fv-product-out-stock { margin-top: 10px; color: #dc2626; font-size: 11px; }
+.fv-product-buy-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.fv-product-buy-actions button { min-height: 45px; border: 0; color: #fff; font-size: 13px; cursor: pointer; }
+.fv-product-buy-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+.fv-product-buy-actions .buy-now { background: #2abbe8; }
+.fv-product-buy-actions .add-cart { background: #f57224; }
+.fv-product-buy-actions .add-cart i { margin-right: 7px; }
+@media (max-width: 720px) {
+    .fv-product-purchase { padding: 15px 0; }
+    .fv-product-title-row h1 { font-size: 18px; }
+    .fv-product-rating-row { margin-top: 14px; }
+    .fv-product-price-box > strong { font-size: 25px; }
+    .fv-product-buy-actions { position: sticky; bottom: 62px; z-index: 40; margin-inline: -12px; padding: 8px 12px; background: #fff; box-shadow: 0 -4px 14px rgba(0,0,0,.07); }
+}

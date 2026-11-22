@@ -1,0 +1,167 @@
+.fv-jfy-card {
+    min-width: 0;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #212121;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fv-jfy-card:hover {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-2px);
+    border-color: #ff5a00;
+    background: #fff8f4;
+    box-shadow:
+        0 8px 22px rgba(255, 90, 0, 0.14);
+}
+
+.fv-jfy-card-image {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.fv-jfy-sale-badge {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    z-index: 1;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: #16a34a;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+.fv-jfy-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fv-jfy-card-image > span {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #fafafa;
+    color: #c4c8cd;
+    font-size: 30px;
+}
+
+.fv-jfy-card-body {
+    padding: 7px 8px 10px;
+}
+
+.fv-jfy-card-title {
+    min-height: 38px;
+    display: -webkit-box;
+    overflow: hidden;
+    color: #151515;
+    font-size: 13px;
+    line-height: 1.38;
+    font-weight: 400;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.fv-jfy-card-title:hover {
+    color: #f85606;
+}
+
+.fv-jfy-flag {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 1px 3px;
+    border-radius: 1px;
+    font-size: 8px;
+    line-height: 1.4;
+    vertical-align: 1px;
+}
+
+.fv-jfy-price {
+    margin-top: 4px;
+    color: #f85606;
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.fv-jfy-discount-row {
+    min-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+    color: #919191;
+    font-size: 9px;
+}
+
+.fv-jfy-discount-row del {
+    color: #a1a1a1;
+}
+
+.fv-jfy-discount-row span {
+    color: #666666;
+}
+
+.fv-jfy-rating-row {
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 3px;
+}
+
+.fv-jfy-stars {
+    display: inline-flex;
+    color: #f8b530;
+}
+
+.fv-jfy-stars i {
+    font-size: 9px;
+}
+
+.fv-jfy-rating-row small {
+    color: #9b9b9b;
+    font-size: 8px;
+}
+
+@media (max-width: 1050px) {
+    .fv-jfy-card-image {
+        height: 175px;
+    }
+}
+
+@media (max-width: 720px) {
+    .fv-jfy-card-image {
+        height: 155px;
+    }
+
+    .fv-jfy-card-body {
+        padding: 6px 6px 9px;
+    }
+
+    .fv-jfy-card-title {
+        min-height: 34px;
+        font-size: 11px;
+    }
+
+    .fv-jfy-price {
+        font-size: 15px;
+    }
+}

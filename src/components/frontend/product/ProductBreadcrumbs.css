@@ -1,0 +1,15 @@
+.fv-product-breadcrumbs {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    overflow-x: auto;
+    color: #666c76;
+    white-space: nowrap;
+    font-size: 11px;
+}
+.fv-product-breadcrumbs a { color: #0093c5; }
+.fv-product-breadcrumbs i { color: #aeb4bc; font-size: 8px; }
+@media (max-width: 720px) {
+    .fv-product-breadcrumbs { min-height: 40px; gap: 6px; font-size: 9px; }
+}

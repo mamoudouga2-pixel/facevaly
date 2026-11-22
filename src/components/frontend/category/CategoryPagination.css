@@ -1,0 +1,41 @@
+.fv-category-pagination {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.fv-category-pagination button {
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d8dadd;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    font-size: 11px;
+}
+
+.fv-category-pagination button.active {
+    border-color: #179eb6;
+    background: #179eb6;
+    color: #fff;
+}
+
+.fv-category-pagination button:disabled {
+    color: #bfc4ca;
+    cursor: not-allowed;
+}
+
+.fv-category-pagination span {
+    color: #b0b4ba;
+}
+
+@media (max-width: 720px) {
+    .fv-category-pagination {
+        min-height: 65px;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,28 @@
+.fv-category-breadcrumbs {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    border-bottom: 1px solid #e5e7eb;
+    color: #727781;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.fv-category-breadcrumbs a {
+    color: #0093c5;
+}
+
+.fv-category-breadcrumbs i {
+    color: #aeb4bc;
+    font-size: 8px;
+}
+
+@media (max-width: 720px) {
+    .fv-category-breadcrumbs {
+        min-height: 42px;
+        gap: 7px;
+        font-size: 10px;
+    }
+}

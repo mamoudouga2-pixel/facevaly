@@ -1,0 +1,30 @@
+.products-section {
+background: #fff;
+}
+
+.products-grid {
+display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+}
+
+@media (max-width: 1000px) and (min-width: 721px) {
+.products-grid {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 720px) {
+.products-section {
+padding: 12px 0 18px;
+}
+
+.products-section .container {
+padding: 0 18px;
+}
+
+.products-grid {
+grid-template-columns: repeat(2, 1fr);
+          gap: 9px;
+}
+}

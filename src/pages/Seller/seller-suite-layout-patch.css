@@ -1,0 +1,58 @@
+
+/* =========================================================
+   SELLER CHROME — matches admin shell (adm-*)
+========================================================= */
+
+.seller-layout.adm-shell {
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.seller-layout .adm-avatar {
+    overflow: hidden;
+    padding: 0;
+}
+
+.seller-layout .adm-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.seller-notification-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.seller-notification-count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border: 2px solid #fffdf9;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.625rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Avoid double padding when both adm-content + page-content apply */
+.seller-layout .adm-content.page-content {
+    padding: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .seller-layout .adm-content.page-content {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,121 @@
+.fv-category-toolbar {
+    min-height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-bottom: 1px solid #e8e9eb;
+}
+
+.fv-category-toolbar-title h1 {
+    margin: 0;
+    color: #111;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.fv-category-toolbar-title p {
+    margin: 6px 0 0;
+    color: #777d87;
+    font-size: 12px;
+}
+
+.fv-category-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fv-category-toolbar-actions label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #111;
+    font-size: 11px;
+}
+
+.fv-category-toolbar-actions select {
+    width: 210px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #d7dade;
+    border-radius: 8px;
+    background: #fff;
+    outline: 0;
+}
+
+.fv-view-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+}
+
+.fv-view-selector button {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: #d1d4d8;
+    font-size: 18px;
+}
+
+.fv-view-selector button.active {
+    color: #003e58;
+}
+
+.fv-mobile-filter-btn {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .fv-category-toolbar-actions {
+        gap: 9px;
+    }
+
+    .fv-category-toolbar-actions select {
+        width: 160px;
+    }
+}
+
+@media (max-width: 720px) {
+    .fv-category-toolbar {
+        min-height: auto;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+    }
+
+    .fv-category-toolbar-title h1 {
+        font-size: 17px;
+    }
+
+    .fv-category-toolbar-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .fv-mobile-filter-btn {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0 12px;
+        border: 1px solid #f85606;
+        border-radius: 5px;
+        background: #fff;
+        color: #f85606;
+    }
+
+    .fv-category-toolbar-actions label > span {
+        display: none;
+    }
+
+    .fv-category-toolbar-actions select {
+        width: 145px;
+        height: 36px;
+    }
+}
